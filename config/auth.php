@@ -35,12 +35,17 @@ return [
     |
     */
 
-    'guards' => [
-        'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
-        ],
+'guards' => [
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
     ],
+
+    'api' => [ // <-- FOKUS DI SINI
+        'driver' => 'jwt', // <-- UBAH INI dari 'token' menjadi 'jwt'
+        'provider' => 'users',
+    ],
+],
 
     /*
     |--------------------------------------------------------------------------
